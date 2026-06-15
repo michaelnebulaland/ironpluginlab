@@ -1,7 +1,7 @@
-"""installer_c45da1 - File system operations."""
+"""installer_a84fe0 - File system operations."""
 from pathlib import Path
 import json, tempfile
-WORKSPACE = "installer_c45da1"
+WORKSPACE = "installer_a84fe0"
 def scan_directory(root: Path) -> dict:
     files = list(root.rglob("*"))
     return {"root": str(root), "total": len(files), "dirs": sum(1 for f in files if f.is_dir()), "files": sum(1 for f in files if f.is_file())}
